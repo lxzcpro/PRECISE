@@ -46,19 +46,6 @@ Ligand discretization is performed using **CoNCISE** (Erden et al., 2024), enabl
   <img src="assets/main_idea.jpg" alt="Detailed description of PRECISE architecture and inputs" style="background-color: white; padding: 20px;">
 </p>
 
-
-## Paper and Citation
-
-### Preprint
-The PRECISE paper is available on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.01.04.697581v1)
-
-### Citing PRECISE
-If you use PRECISE in your research, please cite:
-
-```bibtex
-
-```
-
 ### Related Work
 PRECISE builds upon CoNCISE for ligand discretization:
 ```bibtex
@@ -448,17 +435,6 @@ As a recipient of this software, you may choose which license to receive the cod
 
 ---
 
-## Contact
-
-
-### Contributors
-
-<a href="https://github.com/rohitsinghlab/PRECISE/graphs/contributors">
-  <img src="https://contributors-img.firebaseapp.com/image?repo=rohitsinghlab/PRECISE" />
-</a>
-
----
-
 ## Acknowledgments
 
 PRECISE builds upon:
@@ -468,16 +444,4 @@ PRECISE builds upon:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/rohitsinghlab/PRECISE.svg?style=for-the-badge
-[forks-url]: https://github.com/rohitsinghlab/PRECISE/network/members
-[stars-shield]: https://img.shields.io/github/stars/rohitsinghlab/PRECISE.svg?style=for-the-badge
-[stars-url]: https://github.com/rohitsinghlab/PRECISE/stargazers
-[issues-shield]: https://img.shields.io/github/issues/rohitsinghlab/PRECISE.svg?style=for-the-badge
-[issues-url]: https://github.com/rohitsinghlab/PRECISE/issues
-[license-shield]: https://img.shields.io/github/license/rohitsinghlab/PRECISE.svg?style=for-the-badge
-[license-url]: https://github.com/rohitsinghlab/PRECISE/blob/master/LICENSE
 
