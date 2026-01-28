@@ -421,7 +421,7 @@ A: Currently ZINC (250M compounds). Custom databases can be used with the proper
 
 ## License
 
-The copyrights of this software are owned by **Tufts University** and **Duke University**. 
+The copyrights of this software are owned by the authors' institutions. 
 
 ### Two License Options:
 
