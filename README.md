@@ -7,6 +7,7 @@
 **PRECISE** is a machine-learning framework for large-scale protein-ligand virtual screening that enables targeted screening against specific protein receptor sites while leveraging massive synthesizable ligand databases (ZINC, Enamine).
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
@@ -14,13 +15,11 @@
   - [Surface Generation](#create-surface)
   - [Pocket Detection](#detecting-pockets)
   - [Virtual Screening](#ligand-database-screening)
-- [Paper and Citation](#paper-and-citation)
 - [License](#license)
-- [Contact](#contact)
 
 ## Overview
 
-Contemporary drug-screening pipelines struggle to perform two operations simultaneously: (a) leveraging extremely large databases of synthesizable ligands such as ZINC and Enamine, and (b) conducting targeted screening against a specific protein receptor site. 
+Contemporary drug-screening pipelines struggle to perform two operations simultaneously: (a) leveraging extremely large databases of synthesizable ligands such as ZINC and Enamine, and (b) conducting targeted screening against a specific protein receptor site.
 
 PRECISE addresses this challenge by reimagining protein-ligand binding as an association between quantized ligand features and a protein-surface representation. The framework:
 
@@ -31,6 +30,7 @@ PRECISE addresses this challenge by reimagining protein-ligand binding as an ass
 ### How It Works
 
 For each surface-mesh vertex, PRECISE computes four key physicochemical properties:
+
 1. **Hydropathy**
 2. **Hydrogen-bond donor-acceptor characteristics**
 3. **Surface electrostatics**
@@ -49,6 +49,7 @@ Ligand discretization is performed using CoNCISE, enabling efficient screening o
 ## Installation
 
 ### Requirements
+
 - Python 3.10+
 - CUDA 12.1+ (for GPU acceleration)
 - [Micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html) or [Conda](https://docs.conda.io/en/latest/miniconda.html)
@@ -127,6 +128,7 @@ PRECISE provides three main interfaces for protein-ligand analysis:
 | **Virtual Screening** | Screen ligand databases | PDB + site + database | Ranked SMILES candidates |
 
 ### Create Surface
+
 ![](assets/surface.gif)
 
 After running `precise install-tools`, you can generate surface meshes enriched with physicochemical properties.
@@ -151,7 +153,6 @@ precise create-surface --pdb-path ./example/2QCS.pdb --chain-id A,B
 
 **Output**: PLY file saved to `./example/2QCS_A_B_surface.ply`
 
-
 #### Optional Parameters
 
 ```bash
@@ -163,6 +164,7 @@ precise create-surface \
 ```
 
 **Colored Visualization Output**: When using `--color`, creates visualizations in `colored_surfaces/`:
+
 - `charge_{filename}.ply` - Electrostatic properties
 - `hbond_{filename}.ply` - Hydrogen bond donor/acceptor
 - `hphob_{filename}.ply` - Hydrophobicity
@@ -181,6 +183,7 @@ precise detect-pockets --pdb-path ./example/3WBB.pdb --smiles 'CCO'
 ```
 
 **What happens**:
+
 1. Creates `surface.ply` in the same directory as the PDB (if not already present)
 2. Computes binding likelihood for each surface vertex
 3. Uses MeanShift clustering to identify hotspot regions
@@ -211,7 +214,8 @@ precise detect-pockets \
     --output-path ./results/
 ```
 
-**Output**: 
+**Output**:
+
 - Surface: `./example/surface.ply` (automatically created)
 - Visualization: `./results/3WBB_binding_scores.ply` (colored by binding likelihood)
 
@@ -259,6 +263,7 @@ If `--checkpoint-path` is not provided, PRECISE will automatically download the 
 ```
 
 **Fields**:
+
 - `clusters`: Detected binding sites ordered by average score
 - `residue_ids`: Primary cluster's residue identifiers (highest scoring)
 - `vertex_scores_d`: Per-vertex binding likelihood scores
@@ -273,6 +278,7 @@ Screen large compound libraries to identify potential site-specific binders usin
 #### Pipeline Overview
 
 The virtual screening pipeline performs:
+
 1. **Surface Generation**: Creates protein surface representation
 2. **Pocket Scoring**: PRECISE identifies promising molecular codes for the target site
 3. **SMILES Retrieval**: Fetches candidate molecules from database
@@ -282,6 +288,7 @@ The virtual screening pipeline performs:
 #### Specifying the Binding Site
 
 You can define the target binding site using either:
+
 1. **SDF file** (recommended): Provides structural context from a known ligand
 2. **Coordinates**: Specify exact X, Y, Z coordinates
 
@@ -360,6 +367,7 @@ results/
 ```
 
 **Key Output**: `docking_results_cluster_representatives.csv` contains:
+
 - `smiles`: SMILES string
 - `vina_scores`: Vina docking score (kcal/mol, lower is better)
 - `code`: PRECISE molecular code
@@ -395,9 +403,6 @@ precise virtual-screen \
 | `--device` | GPU device ID | 0 | Use specific GPU (0, 1, 2, ...) |
 | `--precise-chpt` | Model checkpoint path | Auto-download | Optional custom model |
 
-
-
-
 ## FAQ
 
 <p align="center">
@@ -411,9 +416,9 @@ A: Currently ZINC (250M compounds). Custom databases can be used with the proper
 
 ## License
 
-The copyrights of this software are owned by the authors' institutions. 
+The copyrights of this software are owned by the copyright holders.
 
-### Two License Options:
+### Two License Options
 
 1. **Open-Source License**: [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) for non-commercial academic use
 
@@ -421,17 +426,14 @@ The copyrights of this software are owned by the authors' institutions.
 
 As a recipient of this software, you may choose which license to receive the code under.
 
-
-
 ---
 
 ## Acknowledgments
 
 PRECISE builds upon:
+
 - **CoNCISE** for ligand discretization
 - **AutoDock Vina** for docking validation
 - The broader computational chemistry and ML communities
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
