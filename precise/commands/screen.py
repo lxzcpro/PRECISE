@@ -351,9 +351,7 @@ def register_command(app: typer.Typer, console: Console):
                 dir_okay=False,
                 resolve_path=True,
             ),
-        ] = Path(
-            "/hpc/group/singhlab/user/me196/projects/moleculerep/data/dbs/zincv2.db"
-        ),
+        ] = None,  # User must provide path to ZINC database
         dist_thres: Annotated[
             float, typer.Option(help="Clustering distance threshold")
         ] = 0.7,

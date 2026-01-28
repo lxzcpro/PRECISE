@@ -1,5 +1,5 @@
-ZINC_DOWNLOAD_URL = "https://huggingface.co/datasets/merterden98/zincdb/resolve/main/zincv2.db?download=true"
+ZINC_DOWNLOAD_URL = ""  # Will be updated after acceptance
 
-HF_REPO_ID = "merterden98/precise"
+HF_REPO_ID = ""  # Will be updated after acceptance
 MODEL_FILENAME = "precisedti.ckpt"
-CONPLEX_URL = "https://cb.csail.mit.edu/cb/conplex/data/models/BindingDB_ExperimentalValidModel.pt"
+CONPLEX_URL = ""  # Will be updated after acceptance
