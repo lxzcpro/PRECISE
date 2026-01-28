@@ -9,7 +9,7 @@ description = "Precise - Protein-Ligand Binding Prediction with Deep Learning"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    {name = "Singh Lab"},
+    {name = "Anonymous Authors"},
 ]
 license = {text = "MIT"}
 classifiers = [
