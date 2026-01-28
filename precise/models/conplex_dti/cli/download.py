@@ -17,13 +17,13 @@ logg = config_logger(
 
 def get_remote_path(bm: str):
     REMOTE_DATA_PATHS = {
-        "davis": "https://raw.githubusercontent.com/samsledje/ConPLex_dev/main/dataset/DAVIS",
-        "bindingdb": "https://raw.githubusercontent.com/samsledje/ConPLex_dev/main/dataset/BindingDB",
-        "biosnap": "https://raw.githubusercontent.com/samsledje/ConPLex_dev/main/dataset/BIOSNAP/full_data",
-        "biosnap_prot": "https://raw.githubusercontent.com/samsledje/ConPLex_dev/main/dataset/BIOSNAP/unseen_protein",
-        "biosnap_mol": "https://raw.githubusercontent.com/samsledje/ConPLex_dev/main/dataset/BIOSNAP/unseen_drug",
-        "dude": "http://cb.csail.mit.edu/cb/conplex/data",
-        "ConPLex_v1_BindingDB": "https://cb.csail.mit.edu/cb/conplex/data/models/BindingDB_ExperimentalValidModel.pt",
+        "davis": "https://anonymous.url/dataset/DAVIS",
+        "bindingdb": "https://anonymous.url/dataset/BindingDB",
+        "biosnap": "https://anonymous.url/dataset/BIOSNAP/full_data",
+        "biosnap_prot": "https://anonymous.url/dataset/BIOSNAP/unseen_protein",
+        "biosnap_mol": "https://anonymous.url/dataset/BIOSNAP/unseen_drug",
+        "dude": "https://anonymous.url/data",
+        "ConPLex_v1_BindingDB": "https://anonymous.url/data/models/BindingDB_ExperimentalValidModel.pt",
     }
     return REMOTE_DATA_PATHS[bm]
 

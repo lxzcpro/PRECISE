@@ -17,7 +17,7 @@ MODEL_CACHE_DIR = Path(
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "models")
 )
 FOLDSEEK_DEFAULT_PATH = Path(
-    "/afs/csail.mit.edu/u/r/rsingh/work/corals/data-scratch1/ConPLex_foldseek_embeddings/r1_foldseekrep_encoding.p"
+    "./data/ConPLex_foldseek_embeddings/r1_foldseekrep_encoding.p"
 )
 FOLDSEEK_MISSING_IDX = 20
 

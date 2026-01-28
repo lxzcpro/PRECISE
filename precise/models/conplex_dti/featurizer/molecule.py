@@ -25,7 +25,7 @@ from .base import Featurizer
 
 logg = get_logger()
 
-MODEL_CACHE_DIR = Path("/afs/csail.mit.edu/u/s/samsl/Work/Adapting_PLM_DTI/models")
+MODEL_CACHE_DIR = Path("./models")
 
 
 # class Mol2VecFeaturizer(Featurizer):
