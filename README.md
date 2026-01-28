@@ -40,21 +40,11 @@ For each surface-mesh vertex, PRECISE computes four key physicochemical properti
   <img src="assets/features.jpg" alt="Four Features" style="background-color: white; padding: 20px;">
 </p>
 
-Ligand discretization is performed using **CoNCISE** (Erden et al., 2024), enabling efficient screening of entire ligand libraries at scale.
+Ligand discretization is performed using CoNCISE, enabling efficient screening of entire ligand libraries at scale.
 
 <p align="center">
   <img src="assets/main_idea.jpg" alt="Detailed description of PRECISE architecture and inputs" style="background-color: white; padding: 20px;">
 </p>
-
-### Related Work
-PRECISE builds upon CoNCISE for ligand discretization:
-```bibtex
-@article{erden2024concise,
-  title={Learning a CoNCISE language for small-molecule binding},
-  author={Erden, M. et al.},
-  year={2024}
-}
-```
 
 ## Installation
 
@@ -438,7 +428,7 @@ As a recipient of this software, you may choose which license to receive the cod
 ## Acknowledgments
 
 PRECISE builds upon:
-- **CoNCISE** (Erden et al., 2024) for ligand discretization
+- **CoNCISE** for ligand discretization
 - **AutoDock Vina** for docking validation
 - The broader computational chemistry and ML communities
 
